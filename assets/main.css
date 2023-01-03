@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@font-face {
+    font-family: "Inter-VariableFont";
+    src: url("./fonts/static/Inter-Bold.ttf");
+  }
+
+:root{
+    --soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+*{ 
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+*::selection{
+    background-color: var(--Very-dark-blue);
+    color: var(--Off-white);
+}
+
+body{
+    margin: 3% 15%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: inherit;
+}
+
+nav span{
+    font-family: "Inter-VariableFont_slnt", "Bitstream Vera Serif", serif;
+    font-size: 80px;
+    font-weight: bolder;
+    color: var(--Very-dark-blue);
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    color: var(--Dark-grayish-blue);
+}
+
+
+.navigation li{
+    list-style: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.navigation li:hover{
+    color: var(--Soft-red);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 20px;
+}
+
+.head-line{
+    grid-row: 1/3;
+    grid-column: 1/3;
+}
+
+.head-line img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    grid-row: 1/3;
+    grid-column: 3;
+    background-color: var(--Very-dark-blue);
+    padding: 32px 20px;
+}
+
+.aside h1{
+    color: var(--soft-orange);
+    font-size: 60px;
+
+}
+
+
+
+.aside h1::selection, .aside p::selection, .aside h3::selection{
+    background-color: var(--soft-orange);
+    color: var(--Off-white);
+}
+
+.aside h3{
+    color: var(--Off-white);
+}
+
+.aside p{
+    color: var(--Grayish-blue);
+}
+
+p, p span{
+    color: var(--Dark-grayish-blue);
+    line-height: 25px;
+    font-size: 15px;
+    padding-right: 5px;
+    
+}
+
+
+.head-line-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.head-line-info h1{
+    color: var(--Very-dark-blue);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 60px;
+}
+
+.head-line-info p{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 15px;    
+    padding: 2px
+}
+
+.read-more{
+    width: 50%;
+    color: var(--Off-white);
+    height: 25%;
+    background-color: var(--Soft-red);
+    text-transform: uppercase;
+    border: unset;
+    font-size: 12px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.read-more:hover{
+    background-color: var(--Very-dark-blue);
+}
+
+.articles{
+    margin:30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-column: 1/4;
+}
+    
+.articles div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 125px;
+    width: 70%;
+}
+    
+.articles div img{
+    width: 100px;
+    height: 130px;
+    margin-right: 15px;
+}
+
+.articles h1 {
+    color: var(--Grayish-blue);
+    font-size: 35px;
+}
+
+.articles h2{
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.articles h2:hover{
+    color: var(--Soft-red);
+}
+
+h3{
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+h3:hover{
+    color: var(--soft-orange);
+}
