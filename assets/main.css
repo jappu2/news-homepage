@@ -59,9 +59,26 @@ nav span{
     transition: color 0.5s;
 }
 
+.menu-icon{
+    display: none;
+    background-image: url(./images/icon-menu.svg);
+    height: 17px;
+    width: 40px;
+    transition: background-image 0.5s;
+}
+
+.menu-icon.opend{
+    background-image: url(./images/icon-menu-close.svg);
+    height: 31px;
+    width: 32px;
+    z-index: 1;
+}
+
 .navigation li:hover{
     color: var(--Soft-red);
 }
+
+
 
 main{
     display: grid;
@@ -144,7 +161,7 @@ p, p span{
 .read-more{
     width: 50%;
     color: var(--Off-white);
-    height: 25%;
+    height: 50px;
     background-color: var(--Soft-red);
     text-transform: uppercase;
     border: unset;
@@ -168,16 +185,18 @@ p, p span{
     
 .articles div{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
     height: 125px;
-    width: 70%;
+}
+
+.articles div .art-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
     
 .articles div img{
     width: 100px;
-    height: 130px;
+    height: 100%;
     margin-right: 15px;
 }
 
@@ -202,4 +221,35 @@ h3{
 
 h3:hover{
     color: var(--soft-orange);
+}
+
+@media screen  and (max-width: 1240px){
+    main, .head-line-info, .articles{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    body{
+        margin: 2%;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+    .navigation.hidden{
+        display: none;
+    }
+
+    .navigation{
+        flex-direction: column;
+        width: 75%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: var(--Off-white);
+        box-shadow: -3px 0 9px -4px var(--Very-dark-blue);
+        
+    }
 }
