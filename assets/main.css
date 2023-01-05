@@ -223,6 +223,16 @@ h3:hover{
     color: var(--soft-orange);
 }
 
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
 @media screen  and (max-width: 1240px){
     main, .head-line-info, .articles{
         display: flex;
@@ -243,6 +253,7 @@ h3:hover{
 
     .navigation{
         flex-direction: column;
+        justify-content: center;
         width: 75%;
         height: 100vh;
         position: fixed;
@@ -251,5 +262,18 @@ h3:hover{
         background-color: var(--Off-white);
         box-shadow: -3px 0 9px -4px var(--Very-dark-blue);
         
+    }
+
+    .navigation li{
+        font-size: 40px;
+        height: 120px;
+        width: 100%;
+        border-bottom: var(--Dark-grayish-blue) 1px solid;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .navigation li:last-of-type{
+        border-bottom: none;
     }
 }
